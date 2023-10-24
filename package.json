@@ -1,0 +1,16 @@
+{
+  "name": "luvsia",
+  "version": "1.0.0",
+  "description": "Ventus`Blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev posts",
+    "build": "vuepress build posts"
+  },
+  "author": "Ventus",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.10",
+    "vuepress-theme-simple": "^1.2.2"
+  }
+}
