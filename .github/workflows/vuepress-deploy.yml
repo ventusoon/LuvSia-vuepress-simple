@@ -11,7 +11,5 @@ jobs:
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: ventusoon/vuepress-blog
-        TARGET_BRANCH: main
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: posts/.vuepress/dist/
