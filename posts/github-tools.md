@@ -6,17 +6,17 @@ tags: ["tools"]
 summary: "***神一般的生产力工具-无限期更新***"
 ---
 
-***Productivity tools on Github***
+> ***Productivity tools on Github***
 
 <!--more-->
 
 - **目录**
-  - [缘起](/post/github-tools/#技术是第一生产力)
-  - [众乐乐](/post/github-tools/#乱花渐欲迷人眼)
-    - [xplorer](/post/github-tools/#xplorer)
-    - [openai-translator](/post/github-tools/#openai-translator)
-    - [OcrHelper](/post/github-tools/#OcrHelper)
-    - [Everything&EverythingToolbar](/post/github-tools/#Everything&EverythingToolbar)
+  - [缘起](#技术是第一生产力)
+  - [众乐乐](#乱花渐欲迷人眼)
+    - [xplorer](#xplorer)
+    - [openai-translator](#openai-translator)
+    - [OcrHelper](#ocrhelper)
+    - [Everything&EverythingToolbar](#everything)
 
 ## 技术是第一生产力
 
@@ -88,7 +88,7 @@ View More Screenshots
 
 </details>
 
-### *Everything*&*EverythingToolbar*
+### *Everything*
 
 |Tool   |Web                                                                                                  |Function|Download|
 |---------|:---------------------------------------------------------------------------------------------------:|:--------:|:--:|

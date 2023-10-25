@@ -8,40 +8,38 @@ summary: "Blog"
 ---
 
 
-***Build this site***
-
-***Hugo Blog 实战***  
+> ***Build this site Hugo Blog 实战***  
 
 <!--more-->
 
-- [♡闲言碎语](/post/hello-world/#闲言碎语)
-  - [✦从“信用卡”聊到陈年往事](/post/hello-world/#从信用卡聊到陈年往事)
-  - [✦如何选择Hexo与Hugo？](/post/hello-world/#如何选择hexo与hugo)
-  - [✦最终选择](/post/hello-world/#最终选择)
-- [♡准备工作](/post/hello-world/#准备工作)
-  - [✦安装环境和工具](/post/hello-world/#安装环境和工具)
-- [♡开始实战](/post/hello-world/#开始实战)
-  - [✦本地搭建](/post/hello-world/#本地搭建)
-    - [将 hugo 添加到环境变量](/post/hello-world/#将-hugo-添加到环境变量)
-    - [Git Bash](/post/hello-world/#git-bash)
-    - [文件夹内容目录](/post/hello-world/#文件夹内容目录)
-    - [安装VS code 插件](/post/hello-world/#安装-vs-code-插件)
-    - [生成 git 本地仓库](/post/hello-world/#生成-git-本地仓库)
-    - [生成 SSH 密钥](/post/hello-world/#生成-ssh-密钥)
-    - [安装主题](/post/hello-world/#安装主题)
-    - [本地搭建预览](/post/hello-world/#本地搭建预览)
-  - [✦根目录同步私有仓库](/post/hello-world/#根目录同步私有仓库)
-    - [源码、 Public 分开存放](/post/hello-world/#源码-public-分开存放)
-    - [上传公钥](/post/hello-world/#上传公钥)
-    - [远程连接测试](/post/hello-world/#远程连接测试)
-    - [生成 Token，用于连接两个仓库](/post/hello-world/#生成-token用于连接两个仓库)
-    - [Push 本地到私有仓库](/post/hello-world/#push-本地到私有仓库)
-    - [私有仓库生成 Secrets](/post/hello-world/#私有仓库生成-secrets)
-  - [✦自动部署到公开仓库](/post/hello-world/#自动部署到公开仓库)
-  - [✦CDN加速](/post/hello-world/#cdn加速)
-  - [✦大功告成](/post/hello-world/#大功告成)
-- [♡填坑后记](/post/hello-world/#填坑后记)
-- [♡写在最后](/post/hello-world/#写在最后)
+- [闲言碎语](#闲言碎语)
+  - [从信用卡聊到陈年往事](#从信用卡聊到陈年往事)
+  - [如何选择Hexo与Hugo？](#如何选择hexo与hugo)
+  - [最终选择](#最终选择)
+- [准备工作](#准备工作)
+  - [安装环境和工具](#安装环境和工具)
+- [开始实战](#开始实战)
+  - [本地搭建](#本地搭建)
+    - [将 hugo 添加到环境变量](#将-hugo-添加到环境变量)
+    - [Git Bash](#git-bash)
+    - [文件夹内容目录](#文件夹内容目录)
+    - [安装 VS code 插件](#安装-vs-code-插件)
+    - [生成 git 本地仓库](#生成-git-本地仓库)
+    - [生成 SSH 密钥](#生成-ssh-密钥)
+    - [安装主题](#安装主题)
+    - [本地搭建预览](#本地搭建预览)
+  - [根目录同步私有仓库](#根目录同步私有仓库)
+    - [源码\& Public 分开存放](#源码-public-分开存放)
+    - [上传公钥](#上传公钥)
+    - [远程连接测试](#远程连接测试)
+    - [生成 Token，用于连接两个仓库](#生成-token用于连接两个仓库)
+    - [Push 本地到私有仓库](#push-本地到私有仓库)
+    - [私有仓库生成 Secrets](#私有仓库生成-secrets)
+  - [自动部署到公开仓库](#自动部署到公开仓库)
+  - [CDN加速](#cdn加速)
+  - [大功告成](#大功告成)
+- [填坑后记](#填坑后记)
+- [写在最后](#写在最后)
 
 ```javascript
 + 2022.02.11 add 侧边栏 鼠标指针 样式
@@ -71,9 +69,9 @@ summary: "Blog"
 + 2022.01.20 萌生写下这篇文章的想法 并把大纲po在这里
 ```
 
-## ♡闲言碎语
+## 闲言碎语
 
-### ✦从“信用卡”聊到陈年往事
+### 从信用卡聊到陈年往事
 
 - 前段时间，在老婆的支持下(“盗”刷老婆信用卡，orz)，买了一个十年的域名，起初拿来也就无非是给服务器套个域名，加个SSL，反代一些需要用到的web工具。想着这个域名好歹也是`千挑万选`出来的（Sia刚好与老婆名字谐音，所以自然而然地在前面加个Luv不过分吧，2333），现在的朋友圈基本上也没咋发过东西，全都是一些工作上的琐事。不如开个博客，记录一下生活（主要是用着这么有`内涵`的域名，让老婆感受一下应有的尊重，还能升华彼此的感情，哈哈哈，扯远了），还可以把自己“搞机爱好”（`折腾癖好`）的过程记录下，把[README](https://luvsia.com/)中所说的`Ctrl+C`，`Ctrl+V`变为自己的知识，而不是只会复制粘贴，成了一个`工具`人。让这项爱好不至于太肤浅，还能真正掌握一下基础的编程知识。
 
@@ -86,7 +84,7 @@ summary: "Blog"
 ![Hugo](/images/hello-world/Hugo.png)
 - 传统在服务器部署，虽然本地也可以操作，修改内容，但大部分人都是仅仅只在服务器上完成，省去了本地修改、远程部署的步骤。导致服务器一崩，所有数据都随风而去...比如我自己在几年前也是如此。现如今，静态网站成为主流，Go语言也让国际大厂争先使用，像**Google，Dropbox，SoundCloud，Twitter，PayPal**等公司都用 Go 语言构建了他们的后端系统。
 
-### ✦如何选择Hexo与Hugo？
+### 如何选择Hexo与Hugo？
 
 **Hugo中文文档：**
 
@@ -96,13 +94,13 @@ summary: "Blog"
 
 - 什么是Hexo ? Hexo是一款基于Node.js的静态博客框架,依赖少易于安装使用,可以方便的生成静态网页托管在GitHub和Heroku上,是搭建博客的首选框架。
 
-### ✦最终选择
+### 最终选择
 
 - 可以看出，Hexo与Hugo都是静态网站生成器的首选，而且都可以用上[`Github-Pages`](https://pages.github.com/)。在网上筛选了使用者反馈信息之后，最终我还是选择了用Go语言编写的`Hugo`+`Github-Pages`+`CDN`来搭建此Blog。
 
-## ♡准备工作
+## 准备工作
 
-### ✦安装环境和工具
+### 安装环境和工具
 
 |环境|||工具||
 |---|---|---|---|---|
@@ -116,9 +114,9 @@ summary: "Blog"
 
 - [Hugo](https://github.com/gohugoio/hugo/releases)：今天的主角，本地新建一个名为"Hugo"的目录、一个名为"Sites"的用于存放所有博客站点的目录，Hugo 目录下应有三个文件；同时，下载好 Git 程序。
 
-## ♡开始实战
+## 开始实战
 
-### ✦本地搭建
+### 本地搭建
 
 #### 将 hugo 添加到环境变量
 
@@ -223,9 +221,9 @@ git submodule add git@github.com:MeiK2333/github-style.git themes/github-style
 
 - 至此，本地博客就搭建好了。在博客根目录下 git bash，使用 hugo server 来看下主题的效果！（hugo server -D 的话草稿也会显示，注意是大写 D）跳出一大堆提示后，在任意浏览器打开 <http://localhost:1313> 就能实时查看博客效果与调整。如果的博客设置有误，页面会无法查看，请先排除错误后再进行尝试。不需要查看后 Ctrl+C 退出即可。
 
-### ✦根目录同步私有仓库
+### 根目录同步私有仓库
 
-#### 源码、 Public 分开存放
+#### 源码& Public 分开存放
 
 - 建两个 **repositories** ，一个存放**根目录文件**，设置为私密，另一个用来存放 **public** 中的内容，设置为公开
 
@@ -291,7 +289,7 @@ git push -u origin main # 将本地内容推送到远程
 
 - 这一步为自动部署到 public 做准备，进入刚刚建好的 repository，点进它的 **Settings** 中，找到 **Secrets**，点击 **New repository secret**，名称为 **PERSONAL_TOKEN** ，内容为之前备份下来的 [**Token**](/post/hello-world/#生成-token用于连接两个仓库)。
 
-### ✦自动部署到公开仓库
+### 自动部署到公开仓库
 
 **`Github Action`**
 
@@ -344,7 +342,7 @@ jobs:
 
 - 根目录下的 config 文件中 base url 更换为自定义域名。
 
-### ✦CDN加速
+### CDN加速
 
 - 在Cloudflare为自定义域名添加 CNAME 记录，以及四条 A 记录，详见 github 官方说明： [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration)
 
@@ -361,9 +359,9 @@ CNAME WWW 指向公开仓库的github域名
 
 - 使用了 CDN，github 上的 **强制https** 按钮可能不能点；如果无法正常显示 https，也可以在Cloudflare建立 **强制https** 规则。
 
-### ✦大功告成
+### 大功告成
 
-## ♡填坑后记
+## 填坑后记
 
 1. 写新文章最好用命令行新建 md 文件，文件名为英文名最佳，增加解析效率。
 
@@ -434,6 +432,6 @@ taskkill /f /PID xxxxx  #杀死占用的进程
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
 ```
 
-## ♡写在最后
+## 写在最后
 
-**本篇文章的[部署流程](/post/hello-world/#开始实战)对网上教程进行了整合，再加上自己的理解而成。**
+**本篇文章的[部署流程](/hello-world/#开始实战)对网上教程进行了整合，再加上自己的理解而成。**

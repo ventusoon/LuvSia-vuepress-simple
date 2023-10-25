@@ -6,7 +6,7 @@ tags: ["chatgpt"]
 summary: "***自建ChatGPT反向代理***"
 ---
 
-***Build ChatGPT Reverse Proxy***
+> ***Build ChatGPT Reverse Proxy***
 
 * *ChatGPT-Web* 项目的免费代理挂了，故此，选择本项目 [![](https://img.shields.io/badge/github-go--chatgpt--api-pink)](https://github.com/linweiyuan/go-chatgpt-api) 来解决代理问题。
 

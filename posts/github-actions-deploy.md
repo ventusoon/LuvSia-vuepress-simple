@@ -7,19 +7,17 @@ summary: "***Automatically deploying the Front End to the server using GitHub Ac
 ---
 
 
-***Automatically deploying the Front End to the server using GitHub Actions***
+> ***Automatically deploying the Front End to the server using GitHub Actions***
 
-***利用GitHub Actions自动部署前端到服务器***
+## GitHub Actions介绍及原理
 
-## 一、GitHub Actions介绍及原理
-
-* 接触 **GitHub Actions** 也有一段时间了，目前此blog就是利用 **GitHub Action** [自动部署到GitHub托管](/post/hello-world/#自动部署到公开仓库)的。今天把此次前端页面成功部署到服务器端的操作方法详细记录下来，顺便按自己理解写些心得。抽空再码字完善（下班时间开工😭）。
+* 接触 **GitHub Actions** 也有一段时间了，目前此blog就是利用 **GitHub Action** [自动部署到GitHub托管](/hello-world/#自动部署到公开仓库)的。今天把此次前端页面成功部署到服务器端的操作方法详细记录下来，顺便按自己理解写些心得。抽空再码字完善（下班时间开工😭）。
 
 * [GitHub Actions 官方文档](https://docs.github.com/zh/actions)：在 GitHub Actions 的仓库中自动化、自定义和执行软件开发工作流程。 您可以发现、创建和共享操作以执行您喜欢的任何作业（包括 CI/CD），并将操作合并到完全自定义的工作流程中。
 
 * 通过文档可以看出 **GitHub Action** 其强大的代码管理、运行部署、测试推送等一体化自动发布部署功能，省去了大量的重复性工作。由于通过ssh客户端连接到服务器，直接进行前端部署，需要安装各种各样的依赖，很大程度上降低了服务器运行效率，且不易对代码进行修正。
 
-* 本教程是在[《用Nginx Proxy Manager部署静态网页》](/post/nginx-proxy-manager/)基础上延伸出的思路，省去了安装node环境和各种依赖的步骤，直接在 **GitHub Action** 中部署前端。每次在本地对后端文件进行修正后，直接将前端发布到服务器。起到一劳永逸的效果。
+* 本教程是在[《用Nginx Proxy Manager部署静态网页》](/nginx-proxy-manager/)基础上延伸出的思路，省去了安装node环境和各种依赖的步骤，直接在 **GitHub Action** 中部署前端。每次在本地对后端文件进行修正后，直接将前端发布到服务器。起到一劳永逸的效果。
 
 <details>
 <summary>
@@ -30,7 +28,7 @@ GitHub Action 成功示图
 
 </details>
 
-* 示例分析，以[自动部署到GitHub托管](/post/hello-world/#自动部署到公开仓库)为例，分析 **GitHub Action** 工作流程如下
+* 示例分析，以[自动部署到GitHub托管](/hello-world/#自动部署到GitHub托管)为例，分析 **GitHub Action** 工作流程如下
 
 ```bash
 name: luvsia-hugo-blog-autodeploy # 工作流程名称，自行命名
@@ -76,21 +74,21 @@ jobs: # 将工作流文件中运行的所有任务分组在一起
 > Action
 >> 1️⃣作用条件
 >>> 时间节点
->>> 
+>>>
 >>> 分支
 >>
 >> 2️⃣工作任务
 >>> 运行环境
->>> 
+>>>
 >>> 步骤一
->>> 
+>>>
 >>> 步骤二
->>> 
+>>>
 >>> 步骤 N
->>> 
+>>>
 >>> 直接发布到服务器/本地/托管页面
 
-## 二、实战演练
+## 实战演练
 
 * 因为要部署到服务器端，所以要了解连接到服务器的方式，这里选择ssh连接，网上有很多教程也用了sftp连接，都可以。
 
@@ -231,6 +229,6 @@ jobs: # 构建的任务，一个工作流有多个构建任务，
           TARGET: "/data/docker_data/npm/data/sub.ven2s.cn/"
 ```
 
-## 三、如果喜欢请分享此页面，如有疑问请按F5，再进行评论。哈哈
+## 如果喜欢请分享此页面，如有疑问请按F5，再进行评论。哈哈
 
 ![](/images/github-actions-deploy/4.png)

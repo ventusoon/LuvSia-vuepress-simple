@@ -6,7 +6,7 @@ tags: ["Hackintosh"]
 summary: "***Hackintosh黑苹果重启计划***"
 ---
 
-***Hackintosh Reboot Plan***
+> ***Hackintosh Reboot Plan***
 
 ## 闲话 回忆与现在
 

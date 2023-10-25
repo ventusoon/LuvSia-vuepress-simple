@@ -6,7 +6,7 @@ tags: ["ChatGPT"]
 summary: "***3 Steps Build your own ChatGPT Web***"
 ---
 
-***3 Steps Build Your Own ChatGPT Web***
+> ***3 Steps Build Your Own ChatGPT Web***
 
 * [*ChatGPT*](https://baike.baidu.com/item/ChatGPT/62446358?fr=aladdin)（全名：*Chat Generative Pre-trained Transformer*），美国OpenAI研发的聊天机器人程序，于2022年11月30日发布。
 
