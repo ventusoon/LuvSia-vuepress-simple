@@ -2,7 +2,6 @@
   "name": "luvsia",
   "version": "1.0.0",
   "description": "Ventus`Blog",
-  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev posts",
     "build": "vuepress build posts"
