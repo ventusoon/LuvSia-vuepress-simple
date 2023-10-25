@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   title: 'LuSia Ventus',
   description: 'Ventus` Blog',
@@ -9,12 +11,12 @@ module.exports = {
   theme: 'simple',
   themeConfig: {
     author: 'Ventus', // will display on the page footer
-  
+    
   },
   plugins: [
     ['google-analytics-4', { gtag: 'G-MYYL1495Y2' }],
     'permalink-pinyin',
     ['sitemap', { hostname: 'https://luvsia.com' }],
-    ['permalink-pinyin', ['navbar', {'pinyinNav': true}]],
+    'prismjs',
   ],
 }
