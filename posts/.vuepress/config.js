@@ -17,6 +17,5 @@ module.exports = {
     ['google-analytics-4', { gtag: 'G-MYYL1495Y2' }],
     'permalink-pinyin',
     ['sitemap', { hostname: 'https://luvsia.com' }],
-    'prismjs',
   ],
 }
