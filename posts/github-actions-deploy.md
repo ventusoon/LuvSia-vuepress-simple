@@ -107,7 +107,7 @@ ssh-deploy 应用
 
 * 在[![](https://img.shields.io/badge/GitHubAction-easingthemes/ssh--deploy-cyan?logo=github)](https://github.com/easingthemes/ssh-deploy)项目中的 README 中，可以看到其主要配置名称及用途如下。
 
-* |配置名称|用途|示例|
+|配置名称|用途|示例|
 |:---:|:---:|:---:|
 |SSH_PRIVATE_KEY|SSH密钥|`密钥应使用PEM格式生成`|
 |REMOTE_HOST|远程主机|`10.10.10.10`|
