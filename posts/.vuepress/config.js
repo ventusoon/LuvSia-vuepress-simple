@@ -8,7 +8,7 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'LuSia Ventus, Ventus, vuepress-theme-simple, 博客, vue' }],
     ['meta', { name: 'author', content: 'Ventus' }],
   ],
-  theme: 'simple',
+  theme: path.resolve(__dirname, '../../posts/.vuepress/theme/vuepress-theme-simple'),
   themeConfig: {
     author: 'Ventus', // will display on the page footer
     

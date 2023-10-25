@@ -1,0 +1,3 @@
+[submodule "posts/.vuepress/theme/vuepress-theme-simple"]
+	path = posts/.vuepress/theme/vuepress-theme-simple
+	url = git@github.com:ventusoon/vuepress-theme-simple.git
