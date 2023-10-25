@@ -1,6 +1,11 @@
 module.exports = {
-  title: 'luvsia ventus',
-  description: 'Welcome My Blog',
+  title: 'LuSia Ventus',
+  description: 'Ventus` Blog',
+  head: [
+    ['link', { rel: 'shortcut icon', href: '/圆形pink.png' }],
+    ['meta', { name: 'keywords', content: 'LuSia Ventus, Ventus, vuepress-theme-simple, 博客, vue' }],
+    ['meta', { name: 'author', content: 'Ventus' }],
+  ],
   theme: 'simple',
   themeConfig: {
     author: 'Ventus', // will display on the page footer
