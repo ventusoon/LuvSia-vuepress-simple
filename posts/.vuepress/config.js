@@ -2,7 +2,7 @@ module.exports = {
   title: 'LuSia Ventus',
   description: 'Ventus` Blog',
   head: [
-    ['link', { rel: 'shortcut icon', href: '/圆形pink.png' }],
+    ['link', { rel: 'shortcut icon', href: '/images/圆形pink.png' }],
     ['meta', { name: 'keywords', content: 'LuSia Ventus, Ventus, vuepress-theme-simple, 博客, vue' }],
     ['meta', { name: 'author', content: 'Ventus' }],
   ],
@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     ['google-analytics-4', { gtag: 'G-MYYL1495Y2' }],
     'permalink-pinyin',
-    ['sitemap', { hostname: 'https://luvsia.com' }]
+    ['sitemap', { hostname: 'https://luvsia.com' }],
+    ['permalink-pinyin', ['navbar', {'pinyinNav': true}]],
   ],
 }
