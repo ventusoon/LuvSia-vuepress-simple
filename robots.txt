@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luvsia.com/sitemap.xml

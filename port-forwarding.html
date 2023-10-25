@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Port Forward | LuSia Ventus</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="shortcut icon" href="/images/圆形pink.png">
+    <meta name="description" content="Ventus` Blog">
+    <meta name="keywords" content="LuSia Ventus, Ventus, vuepress-theme-simple, 博客, vue">
+    <meta name="author" content="Ventus">
+    
+    <link rel="preload" href="/assets/css/3.styles.0523860e.css" as="style"><link rel="preload" href="/assets/js/app.daa4b047.js" as="script"><link rel="preload" href="/assets/js/0.64ac24e1.js" as="script"><link rel="preload" href="/assets/js/23.67125a57.js" as="script"><link rel="prefetch" href="/assets/js/1.ea54e935.js"><link rel="prefetch" href="/assets/js/10.4e625bc9.js"><link rel="prefetch" href="/assets/js/11.afa8792e.js"><link rel="prefetch" href="/assets/js/12.05da46fb.js"><link rel="prefetch" href="/assets/js/13.48c7aea7.js"><link rel="prefetch" href="/assets/js/14.948e450b.js"><link rel="prefetch" href="/assets/js/15.9df52e2d.js"><link rel="prefetch" href="/assets/js/16.b4c21cfd.js"><link rel="prefetch" href="/assets/js/17.979b1c37.js"><link rel="prefetch" href="/assets/js/18.d3e10269.js"><link rel="prefetch" href="/assets/js/19.98b1b60e.js"><link rel="prefetch" href="/assets/js/20.3be70d4f.js"><link rel="prefetch" href="/assets/js/21.c9283b8e.js"><link rel="prefetch" href="/assets/js/22.149cecca.js"><link rel="prefetch" href="/assets/js/24.36b5ef6d.js"><link rel="prefetch" href="/assets/js/4.669b3083.js"><link rel="prefetch" href="/assets/js/5.1a2bf215.js"><link rel="prefetch" href="/assets/js/6.fa23b811.js"><link rel="prefetch" href="/assets/js/7.2df3f4b8.js"><link rel="prefetch" href="/assets/js/8.eee1554a.js"><link rel="prefetch" href="/assets/js/9.a6a7b906.js">
+    <link rel="stylesheet" href="/assets/css/3.styles.0523860e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container vuepress-theme-simple"><header class="header"><a href="/" title="Ventus` Blog" class="site-name router-link-active">
+      LuSia Ventus
+    </a> <div style="clear: both"></div> <!----></header> <section class="post-view"><div class="post-head"><h1 class="post-title">
+      Port Forward
+    </h1> <time datetime="3/29/2023, 2:23:52 AM" title="3/29/2023, 2:23:52 AM" pubdate="pubdate" class="post-date">
+  6 months ago
+</time></div> <div class="content__default"><blockquote><p><em><strong>Internal network port forwarding</strong></em></p></blockquote> <h1 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h1> <ul><li><p><strong>在进行好<a href="/posts/ddns/">上篇</a>文章的所有操作后，通过远程 <em><code>ping</code></em> 域名，是可以 <em><code>ping</code></em> 通家里的 <em><code>IPv4</code></em> 地址的，但不知为何，通过域名+端口进行远程访问，是失败的，这说明很有可能是端口没有映射成功，于是我又 <a href="https://tool.chinaz.com/port" target="_blank" rel="noopener noreferrer"><em><code>ping</code></em><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 了下端口，果然，状态显示是关闭了的。</strong></p> <p><img src="/images/port-forwarding/1.png" alt="1" title=":smirk:"></p></li> <li><p><strong>来到主路由上的设置，可以看到这是我对 <em><code>openWRT</code></em> 这个设备进行了端口映射，以及设置为 <em><code>DMZ</code></em> 主机。网上很多人说只要设置了 <em><code>DMZ</code></em> 主机，是可以不用设置端口映射的，经我测试，我这里的设备是行不通的，所以我依然进行了端口映射到 <em><code>openWRT</code></em> 。</strong></p></li> <li><p><strong>其实在设置 <em><code>openWRT</code></em> 为端口映射的设备之前，我一直映射的是台式主机的内网地址。我的思路是，既然要在电脑上使用 <em><code>stable-diffusion-webui</code></em> ，那我肯定只需要映射外网端口到电脑主机的内网端口就行了，事实证明，由于我家里网络的复杂程度，这种思路是完全错误的，这也是导致了我频繁映射失败，而无法访问内网的直接原因，因为我跳过了电脑主机网关是 <em><code>openWRT</code></em> 这一情况。所以当我把映射设备改成 <em><code>openWRT</code></em> 后，一下就成功了。（当然， <em><code>openWRT</code></em> 上也必须要对端口进行映射，映射到电脑主机的内网地址）</strong></p></li> <li><p><strong>综上，因为我自己大脑宕机，花了超过24个小时的时间来研究内网穿透，实际上就是一个小小的思路上的错误而导致的，这也是为什么我给标题的“复杂”二字加了引号。</strong></p> <p><img src="/images/port-forwarding/2.png" alt="2" title=":smirk:"></p> <p><img src="/images/port-forwarding/3.png" alt="2" title=":smirk:"></p></li></ul> <h1 id="端口映射"><a href="#端口映射" class="header-anchor">#</a> 端口映射</h1> <table><thead><tr><th>服务名称</th> <th>设备IP</th> <th></th> <th>外部端口(主机)</th> <th>内部端口（主路由）</th> <th>外部端口（主路由）</th></tr></thead> <tbody><tr><td></td> <td></td> <td>内部端口(主机)</td> <td>内部端口（openWRT）</td> <td>外部端口（openWRT）</td> <td></td></tr> <tr><td>RDP</td> <td>192.168.123.110</td> <td>3389</td> <td>3389</td> <td>3389</td> <td>3389</td></tr> <tr><td>Alist</td> <td>192.168.123.110</td> <td>5244</td> <td>5244</td> <td>5244</td> <td>5244</td></tr> <tr><td>SSH</td> <td>192.168.123.110</td> <td>22</td> <td>2121</td> <td>2121</td> <td>2121</td></tr> <tr><td>openWRT</td> <td>192.168.123.3</td> <td>80</td> <td>22513</td> <td>22513</td> <td>22513</td></tr></tbody></table> <ul><li><strong>可以看到，由于我家里的网络布局，对端口进行了两次映射，先把最外面的主路由端口映射到 <em><code>openWRT</code></em> 上，再把第二层设备 <em><code>openWRT</code></em> 端口映射到主机上，如此就形成了完整的端口映射方案，这下再避开一些电信封禁的端口，是可以完美访问内网设备的。</strong></li></ul> <h1 id="域名访问"><a href="#域名访问" class="header-anchor">#</a> 域名访问</h1> <ul><li><p><strong>按理说，我在<a href="/posts/ddns/">上篇</a>文章的 <em><code>ddns-go</code></em> 中添加了域名， <em><code>web</code></em> 服务是可以直接通过域名+端口的形式访问的，但是此时会跳转错误。通过分析，其实也不难得出答案，访问 <em><code>web</code></em> 服务时，因为域名要占用80端口，但是80端口又是被封禁了，所以是无法用此方法的。</strong></p></li> <li><p><strong>来到宝塔面板，添加站点，输入域名+已经映射完成的端口号，访问成功</strong></p> <p><img src="/images/port-forwarding/4.png" alt="4" title=":smirk:"> <img src="/images/port-forwarding/5.png" alt="5" title=":smirk:"></p></li> <li><p><strong>访问网页时，即使加上了 <em><code>SSL</code></em> 也是显示的“不安全”，从研究服务器这么久可以知道，访问内网实际上是一样的，加上 <em><code>SSL</code></em> 是可以成功的。这里一直没有搞懂原因，还是闲下来再测试和折腾吧。。。</strong></p></li></ul></div></section> <footer class="footer">
+  © 2023
+  <i class="icon-user"></i>
+  Ventus
+  <br>
+  Powered by
+  <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
+  | Theme
+  <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.daa4b047.js" defer></script><script src="/assets/js/0.64ac24e1.js" defer></script><script src="/assets/js/23.67125a57.js" defer></script>
+  </body>
+</html>
